@@ -17,6 +17,9 @@ module.exports.getBooks = (req, res) => {
   })
 }
 
+/**
+ * get a book
+ */
 module.exports.getBook = (req, res) => {
   Book.findById(req.params.id, (err, book) => {
     if (err) {
@@ -41,12 +44,18 @@ module.exports.postBook = (req, res) => {
   })
 }
 
+/**
+ * delete a book
+ */
 module.exports.deleteBook = (req, res) => {
   Book.remove({ _id: req.params.id }, (err, result) => {
     res.json({ message: "Book Successfully deleted!", result })
   })
 }
 
+/**
+ * update a book
+ */
 module.exports.updateBook = (req, res) => {
   Book.findById({ _id: req.params.id }, (err, book) => {
     if (err) {

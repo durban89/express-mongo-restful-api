@@ -2,9 +2,10 @@
   "name": "express-mongo-restfull-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/mocha/bin/mocha --timeout 10000",
+    "start": "NODE_ENV=dev && node server.js"
   },
   "repository": {
     "type": "git",
